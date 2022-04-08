@@ -1,15 +1,24 @@
 //Призначаю кольори проекту
+$black: #1B1A1A;
 $colorWhite: #fff;
-
-$colorTemlate: #fcda9baf;
-$colorContent: #b7f7f37e;
-
-$colorBlue: #4170b4;
+$colorDarkBroun: #645C55;
+$colorBroun: #CEC4BC;
+$colorLightBroun: #ECE7E4;
+$colorDarkGrey: #403e3b;
+$colorLightGrey: #F7F7F7;
 
 //Призначаю шрифти проекту
-$fontFamily: "Montserrat", sans-serif;
+$ff: "Poppins", regular;
 
 //Призначаю додаткові змінні проекту
 // calck(minSize + (startSize - minSize)*((100vw - minWidth) / (startWidth-minWidth)))
-$adaptiveFZ: calc(12px + (18 - 12) * ((100vw - 770px) / (1600 - 770)));
-$fz: 20px;
+$fz: calc(11px + (16 - 11) * ((100vw - 1024px) / (1440 - 1024)));
+
+//@media (max-width: 1023px) {
+//   $fz: calc(11px + (16 - 11) * ((100vw - 769px) / (1023 - 769)));
+//}
+
+body {
+   font-family: $ff;
+   font-size: $fz;
+}
