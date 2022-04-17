@@ -14,10 +14,6 @@ $ff: "Poppins", regular;
 // calck(minSize + (startSize - minSize)*((100vw - minWidth) / (startWidth-minWidth)))
 $fz: calc(11px + (16 - 11) * ((100vw - 1024px) / (1440 - 1024)));
 
-//@media (max-width: 1023px) {
-//   $fz: calc(11px + (16 - 11) * ((100vw - 769px) / (1023 - 769)));
-//}
-
 body {
    font-family: $ff;
    font-size: $fz;

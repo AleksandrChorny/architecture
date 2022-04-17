@@ -1,11 +1,36 @@
 .footer {
-   height: 350px;
-   font-size: 28px;
 
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   display: grid;
+   grid-template: 
+   "l  l l l"
+   "o t i f"
+   /1fr max-content max-content max-content;
 
-   text-transform: uppercase;
-   background-color: $colorTemlate;
+   padding: 4% 7%;
+   &__logo {
+      grid-area: l;
+   }
+
+   &__info {
+      grid-area: o;
+      color: $colorDarkBroun;
+   }
+
+   &__ico {
+      
+      margin: 0 10px;
+      svg{
+         width: 30px;
+         height: 30px;
+      }
+   }
+}
+.twitter {
+   grid-area: t;
+}
+.insta {
+   grid-area: i;
+}
+.fase_book {
+   grid-area: f;
 }

@@ -1,0 +1,32 @@
+.get-in-touch {
+   display: grid;
+   grid-template:
+   "s-title txt"
+   "title txt"
+   /1fr 1fr;
+
+   padding: 4% 10%;
+   background-color: $colorBroun;
+   &__sub-title {
+      grid-area: s-title;
+      
+      font-size: 1em;
+      font-weight: 400;
+      text-transform: capitalize;
+      color: $colorDarkBroun;
+   }
+
+   &__title {
+      grid-area: title;
+      font-size: 2.5em;
+      font-weight: 400;
+      line-height: 1.1em;
+      color: $black;
+   }
+
+   &__txt {
+      grid-area: txt;
+      justify-self: end;
+      align-self: center;
+   }
+}

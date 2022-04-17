@@ -1,0 +1,79 @@
+.prior-clients {
+   display: grid;
+   grid-template: 
+   ". t . i1 i2 ." auto
+   ". s . i1 i2 ." auto
+   ". p . i3 i4 ." auto
+   ". p . i3 i4 ." auto
+   /10% 30% 10% 1fr 1fr 10%;
+
+   overflow: hidden;
+
+   padding: 4em 6.5%;
+
+   background-color: $colorDarkGrey;
+   font-size: inherit;
+
+   &__title {
+      grid-area: t;
+      justify-self: start;
+      align-self: end;
+      font-weight: 400;
+      //line-height: normal;
+
+      margin-top: 75px;
+      color: $colorWhite;
+      font-size: 1em;
+      text-transform: uppercase;
+   }
+   
+
+   &__sub-title {
+      grid-area: s;
+      justify-self: start;
+      align-items: start;
+
+      margin: 0 0 7px 0;
+
+      font-weight: 400;
+      line-height: 1.1em;
+      color: $colorWhite;
+      font-size: 2em;
+   }
+
+   &__txt {
+      grid-area: p;
+      color: $colorWhite;
+      font-size: calc(1em - 1px);
+      line-height: 1.5em;
+      margin: 7px 0 75px 0;
+   }
+
+   &__img {
+      width: 128px;
+
+      &._pic1 {
+         grid-area: i1;
+         align-self: center;
+         justify-self: center;
+      }
+   
+      &._pic2 {
+         grid-area: i2;
+         align-self: center;
+         justify-self: center;
+      }
+   
+      &._pic3 {
+         grid-area: i3;
+         align-self: center;
+         justify-self: center;
+      }
+   
+      &._pic4 {
+         grid-area: i4;
+         align-self: center;
+         justify-self: center;
+      }
+   }
+}

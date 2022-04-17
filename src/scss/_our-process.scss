@@ -1,0 +1,75 @@
+.our-process {
+   display: grid;
+   grid-template: 
+   "t t t"
+   "p p p"
+   "i1 i2 i3"
+   /1fr 1fr 1fr;
+
+   justify-items: center;
+   overflow: hidden;
+
+   column-gap: 100px;
+   padding: 5% 12%;
+
+   font-size: inherit;
+   &__title {
+      grid-area: t;
+      font-size: inherit;
+      text-transform: uppercase;
+      margin-bottom: .8em;
+      font-weight: 400;
+      color: $colorDarkBroun;
+   }
+
+   &__subtitle {
+      grid-area: p;
+      font-size: 2.2em;
+      margin-bottom: 1.2em;
+      font-weight: 400;
+      color: $black;
+   }
+}
+.infographics {
+   display: grid;
+   grid-template: 
+   ". im ." auto
+   "ti ti ti" auto
+   "tx tx tx"1fr
+   /1fr 102px 1fr;
+   justify-items: center;
+
+   text-align: center;
+   ._scetch {
+      grid-area: i1;
+   }
+
+   ._finalizing {
+      grid-area: i2;
+   }
+
+   ._building {
+      grid-area: i3;
+   }
+
+   &__img {
+      grid-area: im;
+
+   }
+   &__title {
+      grid-area: ti;
+
+      margin-top: 15px;
+      font-size: calc(1em + 1px);
+      font-weight: inherit;
+      color: $colorDarkGrey;
+   }
+   &__txt {
+      grid-area: tx;
+      margin-top: 10px;
+      font-size: 1em;
+      line-height: 1.5em;
+      font-weight: inherit;
+      color: $colorDarkBroun;
+   }
+}
