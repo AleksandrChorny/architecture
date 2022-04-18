@@ -9,11 +9,6 @@ export function clickOnClassADDClassName(
    document.addEventListener('click', actionMenu);
 
    function actionMenu(event) {
-      //if (ifScroll) {
-      //   console.log('true');
-      //}
-
-      console.log(classToClick);
       if (event.target.closest(classToClick) && document.querySelector(classToAction)) {
          if (document.querySelector(classToClick).classList.contains('_action') && document.querySelector(classToAction).classList.contains('_action')) {
             document.querySelector(classToClick).classList.remove('_action');

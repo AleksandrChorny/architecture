@@ -12,9 +12,21 @@ $ff: "Poppins", regular;
 
 //Призначаю додаткові змінні проекту
 // calck(minSize + (startSize - minSize)*((100vw - minWidth) / (startWidth-minWidth)))
-$fz: calc(11px + (16 - 11) * ((100vw - 1024px) / (1440 - 1024)));
+$fz: calc(12px + (16 - 12) * ((100vw - 1024px) / (1440 - 1024)));
+//$fz: @include fz(30, 50);
+
+@mixin fz ($min-size: 12, $max-size: 16, $minVW: 320, $maxVW: 1440) {
+   font-size: calc(#{$min-size+px} + (#{$max-size} - #{$min-size}) * ((100vw - #{$minVW+px}) / (#{$maxVW} - #{$minVW})));
+}
+
+@mixin flexMix($justify-content: center, $align-items: center) {
+   display: flex;
+   justify-content: $justify-content;
+   align-items: $align-items;
+}
+//@include flexMix(start, end);
 
 body {
    font-family: $ff;
-   font-size: $fz;
+   @include fz($minVW: 768);
 }

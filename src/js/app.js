@@ -12,7 +12,3 @@ flsFunctions.isWebp();
 //Виклик функції додавання каласу в н6алащтуваннях передаємо ім'я класу по якому клік я до кого потрібно додати '_action'
 //click.clickOnClassADDClassName('.burger-menu', '.header__menu', 'scroll');
 click.clickOnClassADDClassName('.burger-menu', '.header__menu', 'dfg');
-
-const a = 'const';
-
-console.log(a);
