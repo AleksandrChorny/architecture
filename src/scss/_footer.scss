@@ -2,18 +2,34 @@
 
    display: grid;
    grid-template: 
-   "l  l l l"
+   "l l l l"
    "o t i f"
    /1fr max-content max-content max-content;
 
    padding: 4% 7%;
+   font-size: 16px;
+
+   @media (max-width: 600px) {
+      grid-template: 
+      "l l l l"
+      "t i f ."
+      "o o o o"
+      /max-content max-content max-content 1fr;
+   }
    &__logo {
       grid-area: l;
+      @media (max-width: 426px) {
+         max-width: 80%;
+      }
    }
 
    &__info {
       grid-area: o;
       color: $colorDarkBroun;
+
+      @media (max-width: 600px) {
+         margin-top: 30px;
+      }
    }
 
    &__ico {

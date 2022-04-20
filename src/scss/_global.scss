@@ -19,6 +19,7 @@ $fz: calc(12px + (16 - 12) * ((100vw - 1024px) / (1440 - 1024)));
    font-size: calc(#{$min-size+px} + (#{$max-size} - #{$min-size}) * ((100vw - #{$minVW+px}) / (#{$maxVW} - #{$minVW})));
 }
 
+
 @mixin flexMix($justify-content: center, $align-items: center) {
    display: flex;
    justify-content: $justify-content;
@@ -28,5 +29,5 @@ $fz: calc(12px + (16 - 12) * ((100vw - 1024px) / (1440 - 1024)));
 
 body {
    font-family: $ff;
-   @include fz($minVW: 768);
+   font-size: $fz;
 }

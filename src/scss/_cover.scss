@@ -6,7 +6,7 @@
    ". h . i" minmax(1em, auto)
    ". t . i" minmax(1em, auto)
    ". a . i" 1fr
-   / auto 36% auto 50%;
+   / 1fr 36% 1fr 50%;
 
    height: auto;
 
@@ -14,11 +14,12 @@
 
    @media (max-width: 426px) {
       grid-template: 
-   ". l . i" 1fr
-   ". h . i" minmax(1em, auto)
-   ". t . i" minmax(1em, auto)
-   ". a . i" 1fr
-   / auto 44% auto 50%;
+         ". l ." 8em
+         ". h ." auto
+         ". t ." auto
+         ". a . " 8em
+         "i i i" auto
+         / 1fr 85% 1fr;
    }
   
    &__logo {
@@ -33,7 +34,7 @@
       color: $colorDarkBroun;
 
       @media (max-width: 426px) {
-         font-size: 9px;
+         font-size: 12px;
       }
 
    }
@@ -50,7 +51,7 @@
       color: $black;
 
       @media (max-width: 426px) {
-         font-size: 14px;
+         font-size: 40px;
       }
    }
    &__txt {
@@ -62,8 +63,8 @@
       margin-bottom: 2.6em;
       color: $black;
       @media (max-width: 426px) {
-         font-size: 8px;
-         margin-bottom: 8px;
+         font-size: 12px;
+         margin-bottom: 16px;
       }
 
    }
@@ -75,13 +76,16 @@
       //display: block;
       font-size: inherit;
       font-weight: 400;
+      height: 1em;
+      display: block;
       //line-height: 24px;
       //margin-top: 52px;
       margin-left: 1.3em;
       color: $black;
 
       @media (max-width: 426px) {
-         font-size: 10px;
+         font-size: 16px;
+         line-height: 16px;
          margin-top: 4px;
       }
 

@@ -12,8 +12,46 @@
    padding: 4em 6.5%;
 
    background-color: $colorDarkGrey;
-   font-size: inherit;
-
+   //font-size: inherit;
+   @include fz();
+   @media (max-width: 1025px){
+      grid-template: 
+         ". t . i1 i2 ." auto
+         ". s . i1 i2 ." auto
+         ". p . i3 i4 ." auto
+         ". p . i3 i4 ." auto
+         /5% 40% 5% 1fr 1fr 5%;
+       padding: 4em 4%;
+      
+   }
+   @media (max-width: 769px){
+      grid-template: 
+         ". t . i1 i2 ." auto
+         ". s . i1 i2 ." auto
+         ". p . i3 i4 ." auto
+         ". p . i3 i4 ." auto
+         /2% 50% 5% 1fr 1fr 2%;
+         padding: 2em 2%;
+   }
+   @media (max-width: 600px){
+      grid-template: 
+         ". t . i1 i2 ." auto
+         ". s . i1 i2 ." auto
+         ". p . i3 i4 ." auto
+         ". p . i3 i4 ." auto
+         /2% 50% 5% 1fr 1fr 2%;
+         padding: 0;
+   }
+   @media (max-width: 426px) {
+      grid-template: 
+         ". t t ." auto
+         ". s s ." auto
+         ". p p ." auto
+         "i1 i1 i2 i2" auto
+         "i3 i3 i4 i4" auto
+         /5% 1fr 1fr 5%;
+         padding: 0;
+   }
    &__title {
       grid-area: t;
       justify-self: start;
@@ -25,6 +63,9 @@
       color: $colorWhite;
       font-size: 1em;
       text-transform: uppercase;
+      //@media (max-width: 426px){
+      //   margin-top: 10%;
+      //}
    }
    
 
@@ -47,11 +88,17 @@
       font-size: calc(1em - 1px);
       line-height: 1.5em;
       margin: 7px 0 75px 0;
+      @media (max-width: 426px){
+         margin: 7px 0 10% 0;
+      }
    }
 
    &__img {
       width: 128px;
-
+      max-width: 80%;
+      @media (max-width: 426px) {
+         margin: 10% 0;
+      }
       &._pic1 {
          grid-area: i1;
          align-self: center;

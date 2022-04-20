@@ -1,10 +1,10 @@
 .our-process {
    display: grid;
    grid-template: 
-   "t t t"
-   "p p p"
-   "i1 i2 i3"
-   /1fr 1fr 1fr;
+      "t t t"
+      "p p p"
+      "i1 i2 i3"
+      /1fr 1fr 1fr;
 
    justify-items: center;
    overflow: hidden;
@@ -12,7 +12,24 @@
    column-gap: 100px;
    padding: 5% 12%;
 
-   font-size: inherit;
+   //font-size: inherit;
+   @include fz();
+   @media (max-width: 1025px) {
+      column-gap: 4em;
+   }
+   @media (max-width: 769px) {
+      padding: 5% 4%;
+      column-gap: 2em;
+   }
+   @media (max-width: 426px) {
+      grid-template: 
+         "t"
+         "p"
+         "i1"
+         "i2"
+         "i3"
+         /1fr;
+   }
    &__title {
       grid-area: t;
       font-size: inherit;
@@ -33,10 +50,10 @@
 .infographics {
    display: grid;
    grid-template: 
-   ". im ." auto
-   "ti ti ti" auto
-   "tx tx tx"1fr
-   /1fr 102px 1fr;
+      ". im ." auto
+      "ti ti ti" auto
+      "tx tx tx"1fr
+      /1fr 102px 1fr;
    justify-items: center;
 
    text-align: center;
@@ -54,7 +71,9 @@
 
    &__img {
       grid-area: im;
-
+      @media (max-width: 769px) {
+         width: 80%;
+      }
    }
    &__title {
       grid-area: ti;
@@ -71,5 +90,8 @@
       line-height: 1.5em;
       font-weight: inherit;
       color: $colorDarkBroun;
+      @media (max-width: 426px) {
+         width: 70%;
+      }  
    }
 }

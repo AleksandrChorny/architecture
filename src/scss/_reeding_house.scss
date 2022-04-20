@@ -28,6 +28,9 @@
       &._right {
          padding-left: 75%;
          padding-right: 3%;
+         @media (max-width: 600px) {
+            padding-left: 65%;
+         }
 
          @media (max-width: 426px) {
             max-width: 95%;
@@ -42,6 +45,10 @@
       &._left{
          padding-left: 5%;
          padding-right: 75%;
+         @media (max-width: 600px) {
+            padding-right: 65%;
+
+         }
 
          @media (max-width: 426px) {
             max-width: 95%;
