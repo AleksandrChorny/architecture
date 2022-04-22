@@ -45,10 +45,23 @@
       color: $black;
    }
 
-   &__txt {
+   &__btn {
       grid-area: txt;
       justify-self: end;
       align-self: center;
+
+      height: 3em;
+      padding: 0 1em;
+      border-radius: 1em;
+
+      white-space: nowrap;
+      background-color: inherit;
+      border: 0 solid $colorDarkBroun;
+
+      transition: border .3s;
+      &:hover {
+         border: 2px solid $colorDarkBroun;
+      }
       @media (max-width: 769px) {
          font-size: 14px;
       }

@@ -13,21 +13,26 @@ export function clickOnClassADDClassName(
          if (document.querySelector(classToClick).classList.contains('_action') && document.querySelector(classToAction).classList.contains('_action')) {
             document.querySelector(classToClick).classList.remove('_action');
             document.querySelector(classToAction).classList.remove('_action');
-            //document.querySelector('body').classList.add('_lock');
-            //document.querySelector('body').classList.remove('_lock');
+            document.querySelector("body").style.overflow = "";
             return;
          }
          if (document.querySelector(classToClick).classList.contains('_action') && !document.querySelector(classToAction).classList.contains('_action')) {
             document.querySelector(classToAction).classList.add('_action');
+            if (document.querySelector("body").style.overflow !== "hidden") {
+               document.querySelector("body").style.overflow = "hidden";
+            }
          }
          if (!document.querySelector(classToClick).classList.contains('_action') && document.querySelector(classToAction).classList.contains('_action')) {
             document.querySelector(classToAction).classList.remove('_action');
+            document.querySelector("body").style.overflow = "";
             return;
          }
          if (!document.querySelector(classToClick).classList.contains('_action') && !document.querySelector(classToAction).classList.contains('_action')) {
             document.querySelector(classToClick).classList.add('_action');
             document.querySelector(classToAction).classList.add('_action');
-
+            if (document.querySelector("body").style.overflow !== "hidden") {
+               document.querySelector("body").style.overflow = "hidden";
+            }
          }
       }
    }

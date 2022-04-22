@@ -1,7 +1,7 @@
 .modal{
    position: fixed;
    z-index: 999;
-
+   top: -100%;
    width: 100vw;
    height: 100vh;
 
@@ -10,14 +10,23 @@
    padding: 4%;
    
    background-color: rgba(64, 62, 59, 0.85);
+   backdrop-filter: blur(3px);
    cursor: pointer;
+
+   transition: opacity .3s;
+
+   opacity: 0;
+   &._action{
+      top: 0;
+      opacity: 1;
+   }
    &__content {
       position: relative;
-      min-width: 0;
-      min-height: 0;
-      background-color: rgba(255, 255, 255, 0.2);
-      border: 1px solid #fff;
-      padding: 40px;
+      min-width: 10%;
+      min-height: 10%;
+      //background-color: rgba(64, 62, 59, 0.85);
+      //border: 1px solid #fff;
+      //padding: 40px;
       cursor: default;
    }
    &__close{  
@@ -39,11 +48,16 @@
       color: $colorWhite;
       
       cursor: pointer;
+      transition: transform .1s;
+
+      &:hover {
+         transform: scale(1.1);
+      }
       &::before, &::after{
          content: '';
          position: absolute;
          display: block;
-         width: 4px;
+         width: 3px;
          height: 100%;
          background-color: #fff;
          border-radius: 2px;
@@ -52,18 +66,74 @@
          transform: rotate(45deg);
       }
       &::after{
-         transform: rotate(-45deg); 
+         transform: rotate(-45deg);
       }
    }
 }
 
-.block {
-//   position: relative;
-   //@include flexMix();
-  width: 500px;
-  height: 300px;
-//   font-size: 50px;
+.form {
+   //display: grid;
+   //grid-auto-columns: 10% 60% 10%;
+   padding: 30px;
 
-  background: $colorBroun;
-  
+   width: auto;
+   height: auto;
+
+   
+   font-family: $ff;
+   font-size: 18px;
+   line-height: normal;
+
+   color: $colorWhite;
+   //background-color: rgba(64, 62, 59, 0);
+   //backdrop-filter: blur(3px);
+   // background: $colorDarkBroun;
+
+   input {
+      //grid-column: 2/2;
+      display: block;
+
+      width: 350px;
+      height: 1.5em;
+
+      margin: 0 0 .5em 0;
+
+      font-size: 1em;
+      line-height: normal;
+      font-family: inherit;
+
+      color: $colorDarkBroun;
+      box-shadow: 2px 2px 4px 3px $colorDarkGrey;
+   }
+
+   input[type=submit]{
+      height: 46px;
+      width: 200px;
+      margin: 2em auto 0 auto;
+
+      text-transform: uppercase;
+      font-family: inherit;
+      font-size: .9em;
+
+      border: 2px solid $colorWhite;
+      border-radius: 14px;
+      color: $colorWhite;
+      background-color: inherit;
+
+      cursor: pointer;
+      transition: transform .1s;
+
+      &:hover {
+         transform: scale(1.02);
+      }
+   }
+   p {
+      display: block;
+
+      font-size: .7em;
+      line-height: 2em;
+      i {
+         color: red;
+      }
+   }
 }
