@@ -1,0 +1,34 @@
+body {
+  font-family: "Poppins", regular;
+  font-size: calc(12px + 4 * (100vw - 1024px) / 416);
+}
+
+.content {
+  text-align: center;
+}
+.content h3 {
+  font-weight: 700;
+  line-height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.content ul {
+  font-size: 18px;
+  text-align: left;
+}
+.content p {
+  font-size: 18px;
+  text-align: left;
+}
+
+.call {
+  width: 60px;
+  height: 60px;
+  fill: rgb(0, 217, 255);
+}
+
+.svg-call-dims {
+  width: 200px;
+}
